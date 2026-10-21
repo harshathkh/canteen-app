@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Campus Canteen</title>
+</head>
+<body>
+  <header>
+    <h1>Campus Canteen</h1>
+    <span>Cart: <b id="cart-count">0</b></span>
+  </header>
+  <ul id="menu">
+    {% for item in items %}
+    <li>
+      {{ item.name }} — ₹{{ item.price }}
+      <button class="add-btn" data-id="{{ item.id }}">Add to cart</button>
+    </li>
+    {% endfor %}
+  </ul>
+  <script src="/static/menu.js"></script>
+</body>
+</html>
